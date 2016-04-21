@@ -2,6 +2,9 @@
   <div class="address-info">
     <div class="title">
       <h2><%= @address.title %></h2>
+      <div id="show-score" data-score="<%= @address.average_point %>"></div>
+      <span>(<%= pluralize @address.reviews.count, t("review.vote") %>)</span>
+      <p>
         <%= t "posted_at" %>
         <%= @address.created_at.to_date.to_formatted_s :long_ordinal %>
       </p>

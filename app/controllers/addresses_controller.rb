@@ -24,7 +24,6 @@ class AddressesController < ApplicationController
     @recent_addresses = Address.last Settings.num_of_recent_addresses
     @reviews = @address.reviews.page params[:page]
     @review = @address.reviews.build
-    @user_rate = @address.user_rates.where(user_id: current_user.id).first_or_initialize
     respond_to do |format|
       format.html
       format.js

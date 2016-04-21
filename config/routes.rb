@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   resources :addresses do
     resources :reviews, only: [:create, :edit, :update, :destroy]
-    resources :user_rates, only: [:create, :edit, :update, :destroy]
   end
 
   resources :reviews, only: :none do

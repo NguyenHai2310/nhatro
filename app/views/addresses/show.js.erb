@@ -3,12 +3,12 @@ $("#review-list").html("<%= j (render @reviews) %>")
 $(".next-previous-links").html("<%= j (link_to_previous_page @reviews, t("Previous"), class: "btn btn-primary", remote: true) %>")
 $(".next-previous-links").append(" <%= j (link_to_next_page @reviews, t("Next"), class: "btn btn-primary", remote: true) %>")
 
-// $(".show-point").raty({
-//   readOnly: true,
-//   score: function() {
-//     return $(this).data("rate")
-//   }
-// })
+$(".show-point").raty({
+  readOnly: true,
+  score: function() {
+    return $(this).data("rate")
+  }
+})
 
 if(number_review > 3){
   $("html, body").animate({scrollTop : 900}, 1500)

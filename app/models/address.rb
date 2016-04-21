@@ -20,7 +20,6 @@ class Address < ActiveRecord::Base
   belongs_to :region
   has_many :images, dependent: :destroy
   has_many :reviews, dependent: :destroy
-  has_many :user_rates, dependent: :destroy
 
   accepts_nested_attributes_for :images, allow_destroy: true
 

@@ -13,6 +13,7 @@ $("#show-score+span").text("(<%= pluralize @review.address.reviews.count,
 $("#review-number").text("<%= pluralize @review.address.reviews.count,
                               t('review.review_label') %>")
 
+$("#rate").raty({score: 0})
 $("#selected-file-name").text("")
 $(".form-actions").css("padding-top", "0px")
 $("#review_point").val("")
@@ -26,7 +27,7 @@ $("#choose-file").change(function(){
   $(".form-actions").css("padding-top", "8px")
 })
 
-// $("#review_<%= @review.id %> .show-point").raty({
-//   readOnly: true,
-//   score: <%= @review.point %>
-// });
+$("#review_<%= @review.id %> .show-point").raty({
+  readOnly: true,
+  score: <%= @review.point %>
+});

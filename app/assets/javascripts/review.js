@@ -1,22 +1,22 @@
 $(document).ready(function(){
-  // $("#rate").raty({
-  //   half: true,
-  //   click: function(score, evt) {
-  //     $("#review_point").val(score);
-  //   }
-  // });
+  $("#rate").raty({
+    half: true,
+    click: function(score, evt) {
+      $("#review_point").val(score);
+    }
+  });
 
   $("#show-score").raty({
     readOnly: true,
     score: $("#show-score").attr("data-score")
   });
 
-  // $(".show-point").raty({
-  //   readOnly: true,
-  //   score: function() {
-  //     return $(this).data("rate");
-  //   }
-  // });
+  $(".show-point").raty({
+    readOnly: true,
+    score: function() {
+      return $(this).data("rate");
+    }
+  });
 
   $("#choose-file").hide();
   $(".upload-img img").click(function(){
