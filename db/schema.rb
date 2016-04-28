@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421023628) do
+ActiveRecord::Schema.define(version: 20160420161610) do
 
   create_table "addresses", force: :cascade do |t|
     t.float    "lng",             limit: 24

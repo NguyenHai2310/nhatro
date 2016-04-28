@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :address do
     contact {Faker::PhoneNumber.cell_phone}
-    address {Faker::Address.street_address}
+    address {["nha tro ha noi", "nha tro gia re"].sample}
     description {Faker::Lorem.paragraph(6, true)}
     lat {rand 20.0..22.0}
     lng {rand 105.0..106.0}
@@ -22,6 +22,7 @@ FactoryGirl.define do
     ceiling_fan {[true, false].sample}
     price {rand(1..10)*1000000}
     house {rand(0..1)}
+    # point {rand 0..10}
 
     after(:build) do |address|
       address.reviews << FactoryGirl.build(:review, address: address)
