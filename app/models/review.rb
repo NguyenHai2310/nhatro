@@ -8,7 +8,7 @@ class Review < ActiveRecord::Base
   validates :content, presence: true
   validates :user, presence: true
   validates :address, presence: true
-  validates :point, presence: true
+  # validates :point, presence: true
 
   mount_uploader :image, PhotoUploader
 

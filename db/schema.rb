@@ -76,16 +76,14 @@ ActiveRecord::Schema.define(version: 20160421023628) do
   create_table "images", force: :cascade do |t|
     t.integer  "address_id", limit: 4
     t.string   "photo",      limit: 255
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.boolean  "is_main",    limit: 1,   default: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "regions", force: :cascade do |t|
     t.string   "province",   limit: 255
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.boolean  "is_home",    limit: 1,   default: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "reviews", force: :cascade do |t|

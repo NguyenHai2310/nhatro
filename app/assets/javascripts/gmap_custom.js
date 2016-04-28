@@ -1,3 +1,4 @@
+var markers = [];
 $(document).ready(function(){
   $("#mylocation").click(function() {
     geoLocation();
@@ -39,6 +40,10 @@ function initialize() {
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
   var searchBox = new google.maps.places.SearchBox((input));
+
+  google.maps.event.addListener(map, 'click', function(event) {
+    validateClickPoint(event.latLng);
+  });
 
   google.maps.event.addListener(searchBox, "places_changed", function() {
     var places = searchBox.getPlaces();

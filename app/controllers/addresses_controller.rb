@@ -10,12 +10,12 @@ class AddressesController < ApplicationController
 
     @regions = []
 
-    #binding.pry
-    #if params[:province].nil?
-      #Region.homes.each{|region| @regions << region.addresses.last(5)}
-    #else
-      #@regions << Address.by_province(params[:province])
-    #end
+    # binding.pry
+    if params[:province].nil?
+      Region.first(5).each{|region| @regions << region.addresses.last(5)}
+    else
+      @regions << Address.by_province(params[:province])
+    end
   end
 
   def show

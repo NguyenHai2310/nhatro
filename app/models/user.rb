@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, PhotoUploader
 
   PARAMS_ATTRIBUTES = [:name, :email, :password, :password_confirmation,
-    :current_password, :avatar, :age, :address, :job, :phone_number]
+    :current_password, :avatar, :phone_number, :age, :job]
 
   def google_oauth2
     identities.where(provider: "google_oauth2").first

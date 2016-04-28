@@ -33,9 +33,9 @@ $(document).ready(function(){
     if($(".text-area-wrapper #review_content").val().trim().length === 0){
       notice += "Review content can not empty \n";
     }
-    if($("#review_point").val().trim().length === 0){
-        notice += "You have not rated address yet \n";
-      }
+    // if($("#review_point").val().trim().length === 0){
+    //     notice += "You have not rated address yet \n";
+    //   }
     if(notice.length > 0){
       alert(notice);
       return false;
