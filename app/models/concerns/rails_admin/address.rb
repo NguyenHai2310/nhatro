@@ -13,10 +13,6 @@ module RailsAdmin::Address
       end
 
       edit do
-        field :google_map, :map do
-          label "Map"
-          help false
-        end
         field :lat do
           label "Latitude"
           help false
