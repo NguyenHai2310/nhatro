@@ -23,7 +23,6 @@ num_of_show_location: 5
 num_of_address_by_regions: 5
 pagination:
   per_page: 10
-num_of_chat_history: 20
 pages:
   ten: 10
 locations:
@@ -178,12 +177,6 @@ images:
 review:
   upload_icon: "upload_img.png"
   zero: 0
-chat:
-  img_size: "20x20"
-  type:
-    new_message: "new_message"
-    connected: "connected"
-    disconnected: "disconnected"
 type:
   title: "Title"
   price_low_high: "Price: Low to High"

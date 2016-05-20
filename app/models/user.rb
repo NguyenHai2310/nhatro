@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :identities
-  has_many :chats
   has_many :user_rates, dependent: :destroy
 
   validates :name, presence: true, length: {maximum: Settings.validations.name_max_length}
